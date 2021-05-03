@@ -20,12 +20,28 @@ div.logo {
     color: #bcc3c7;
 }
 
-}
-
 ul.nav-links {
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+div a.drop-down {
+    display: none;
+    position:absolute;
+    top: 0.75rem;
+    right: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+div a.drop-down .bar {
+    height:3px;
+    width:80%;
+    background-color: #bcc3c7;
+    border-radius: 10px;
 }
 
 ul li {
@@ -349,19 +365,41 @@ div.footer h6 {
 }
 
 @media screen and (max-width: 700px){
-    ul.nav-links{
-        display: block;
+    div.nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 4rem;
+    }
+
+    ul.nav-links {
+        flex-direction: column;
+        line-height: 30px;
+        width:100%;
+        display: none;
+    }
+    ul.nav-links.active {
+        display: flex;
+    }
+    div a.drop-down {
+        display: flex;
     }
     ul li a:hover {
         color: #304353;
         background: #fff;
         padding: 0.1rem;
     }
+    div.logo {
+        font-size: 1.4rem;
+      }
+    ul li {
+        font-size: 0.8rem;
+        text-align:end;
+    }
     div.hero-content-heading h3 {
-        font-size: 1.9rem;
+        font-size: 1.45rem;
     }
     div.hero-content-heading p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
     div.background p {
         font-size: 0.7rem;
@@ -374,6 +412,9 @@ div.footer h6 {
     } 
     div.hero-background-pos {
         display: none;
+    }
+    div.snapshot-team h2 {
+        font-size: 1.4rem;
     }
     div.snapshot-box-content {
         display: block;
